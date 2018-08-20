@@ -5,7 +5,7 @@
 import urllib.request, bs4, csv
 #request lib to download the page, bs4 to look at things cooler, csv to write to excel
 
-f = open("dataoutput.csv", "w", newline = '') #opens an output file to write to
+f = open("dataoutput2.csv", "w", newline = '') #opens an output file to write to
 writer = csv.writer(f)          
 
 url = "https://en.wikipedia.org/wiki/List_of_highest-grossing_video_game_franchises"
@@ -28,5 +28,4 @@ for tr in rows:
         writer.writerow(cols)
         f.flush()
         print(cols)
-
 f.close()
